@@ -5,7 +5,6 @@ services:
     container_name: bot_debug
     restart: always
     environment:
-      - DOCKER_BUILDKIT=0
       - BOT_TOKEN=${BOT_TOKEN}
     logging:
       driver: "json-file"
