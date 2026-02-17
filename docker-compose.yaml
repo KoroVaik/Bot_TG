@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: .
+    image: my_bot
+    container_name: bot_debug
+    restart: always
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10mb"
